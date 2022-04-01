@@ -1,0 +1,73 @@
+.App {
+  overflow-x: hidden;
+  /* background-color: #1c1e22; */
+}
+.carousel2 {
+  width: 100%;
+  height: 50vh;
+  position: relative;
+}
+.FrItem {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  background-color: blueviolet;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.FrItem:hover .img {
+  transform: translateY(-15px);
+}
+.img {
+  transition: all 0.2s ease-in;
+  width: 350px;
+  height: 170px;
+}
+
+.FrTitle {
+  position: absolute;
+  bottom: -35px;
+  font-family: "Raleway", sans-serif;
+  text-transform: capitalize;
+  left: 10px;
+  color: rgba(255, 255, 255, 0.815);
+}
+.controls {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -30px;
+}
+.control-btns {
+  border: 0;
+  background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
+}
+.control-btns:disabled {
+  filter: brightness(0.5);
+}
+.button1 {
+  margin-right: 20px;
+}
+.button2 {
+  margin-left: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .img {
+    width: 300px;
+    height: 170px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 992px) {
+}
+@media screen and (min-width: 993px) {
+  .img {
+    width: 360px;
+    height: 170px;
+  }
+}

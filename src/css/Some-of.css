@@ -1,0 +1,125 @@
+.some-of {
+  display: grid;
+  background-color: rgba(0, 0, 0, 0);
+  align-content: center;
+}
+.circles {
+  height: 160px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+}
+.circle {
+  /* box-shadow: 0px 0px 2px white; */
+  border-radius: 80px;
+  width: 120px;
+  height: 120px;
+
+  position: relative;
+  overflow: hidden;
+  transition: height 0.2s linear;
+}
+.circle:hover {
+  height: 160px !important;
+  z-index: 2;
+}
+.circle:hover img {
+  opacity: 1;
+}
+.circle > * {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.circle img {
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.2s linear;
+}
+@media screen and (max-width: 375px) {
+  .some-of {
+  }
+}
+@media screen and (min-width: 376px) {
+  .some-of {
+    /* background-color: rgba(127, 255, 212, 0.507); */
+  }
+}
+.circles a {
+  display: flex;
+  align-items: center;
+}
+/* ----------------------------------------- */
+
+@media screen and (max-width: 768px) {
+  .some-of {
+    grid-template-columns: auto;
+    height: 110vh;
+  }
+  .circles {
+    min-height: 70vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .circle {
+    margin: 10px;
+    border: 1px solid white;
+  }
+  .title {
+    font-size: 50px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .some-of {
+    grid-template-columns: auto;
+    justify-items: center;
+    gap: 50px;
+  }
+  .some-of .title {
+    background-color: rgba(127, 255, 212, 0);
+    width: 90%;
+    height: 100%;
+  }
+  .circles {
+    flex-direction: row;
+    background-color: rgba(127, 187, 255, 0);
+    width: 110%;
+    height: 160px;
+  }
+  .circle {
+    margin: 10px;
+    box-shadow: 0px 0px 2px white;
+  }
+}
+@media screen and (min-width: 993px) {
+  .some-of {
+    grid-template-columns: 25% 75%;
+    /* padding-right: 20vw; */
+  }
+  .some-of .title {
+    background-color: rgba(127, 255, 212, 0);
+
+    height: 100%;
+  }
+  .circles {
+    flex-direction: row;
+    justify-items: flex-start;
+    background-color: rgba(127, 187, 255, 0);
+
+    height: 160px;
+  }
+  .circle {
+    margin: 10px;
+    box-shadow: 0px 0px 2px white;
+  }
+}

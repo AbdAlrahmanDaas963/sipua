@@ -1,0 +1,44 @@
+@media screen and (max-width: 768px) {
+  .back,
+  .get-to,
+  .some-of,
+  .why-me,
+  body {
+    /* background: linear-gradient(to right, #434447, #191b1e); */
+    background: linear-gradient(to right, #bb7dee, #232e5f);
+    /* z-index: -1; */
+    /* padding-right: 167px; */
+  }
+}
+@media screen and (min-width: 376px) and (max-width: 768px) {
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+}
+
+/* -------------------- */
+@media screen and (max-width: 377px) {
+}
+@media screen and (min-width: 378px) {
+  /* .back,.landing,.get-to,.some-of,.what-i,.why-me,.contact{
+        padding-right: 157px;
+    } */
+}
+
+/* ------------------ */
+@media screen and (max-width: 768px) {
+}
+@media screen and (min-width: 769px) and (max-width: 992px) {
+}
+@media screen and (min-width: 993px) {
+  /* .back,.landing,.get-to,.some-of,.what-i,.why-me,.contact{
+        padding-right: 157px;
+    } */
+  .top .landing,
+  .top .get-to,
+  .top .some-of,
+  .top .what-i,
+  .top .what-i-2,
+  .top .contact {
+    padding-right: 170px;
+  }
+}

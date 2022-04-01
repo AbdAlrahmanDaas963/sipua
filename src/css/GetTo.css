@@ -1,0 +1,392 @@
+.get-to {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  align-content: center;
+  /* box-shadow: 0 1px 1px #ffe84f85; */
+  border-bottom: 1px solid #ffe84f85;
+  min-height: 100vh;
+}
+.get-head,
+.get-det {
+  position: relative;
+}
+.get-to .side {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 10px;
+  background-color: rgba(0, 255, 255, 0);
+  color: #eef6f8e1;
+  font-size: 35px;
+  line-height: 1;
+}
+.get-to .main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(0, 255, 255, 0);
+  height: fit-content;
+}
+.get-body {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.get-to .get-head,
+.get-to .get-num {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  width: 50%;
+  background-color: rgba(0, 255, 255, 0);
+}
+.get-to .get-head .in {
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+  background-color: rgba(0, 255, 255, 0);
+  padding: 0 !important;
+  color: #eef6f8de;
+}
+.get-head .in .one {
+  font-size: 50px;
+  font-weight: 900;
+}
+.get-head .in .one span {
+  font-size: 30px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+.get-head .in .two {
+  font-size: 25px;
+  font-weight: normal;
+}
+.get-to .get-num {
+  justify-content: flex-end;
+  width: 100%;
+  position: relative;
+}
+.get-to .get-num .mark {
+  display: none;
+}
+
+.get-num .in {
+  width: 50%;
+  height: 100%;
+  background-color: rgba(0, 255, 255, 0);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.get-num .in .col {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  font-weight: 300;
+}
+.get-num .in .col .num {
+  font-size: 40px;
+  color: #ffffffe0;
+  font-family: "Raleway", sans-serif;
+}
+.get-num .in .col .titl {
+  font: 8px;
+  color: #eef6f893;
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+}
+.get-para .in {
+  background-color: rgba(0, 255, 85, 0);
+  font-weight: 100;
+  color: #eef6f8bd;
+}
+.get-det .in {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 255, 255, 0);
+  display: grid;
+  grid-template-columns: auto auto;
+  align-content: center;
+}
+.get-det .in .lef,
+.get-det .in .rig {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+  font-weight: normal;
+  color: #eef6f8dc;
+  white-space: nowrap;
+}
+.get-det .in .lef {
+  align-items: flex-end;
+  font-weight: lighter;
+}
+.get-para .in div,
+.get-det .in {
+  font-family: "Raleway", sans-serif;
+}
+.get-body .get-para .in {
+  font-weight: lighter;
+}
+.theline {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 100%;
+  height: 1px;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.newline {
+  /* background-color: #ffe84f; */
+  background-color: #ffe84f;
+  width: 100%;
+  height: 1px;
+  opacity: 0;
+}
+@media screen and (max-width: 767px) {
+  .get-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .get-to {
+    display: grid;
+    grid-template-columns: 100%;
+    /* box-shadow: 0 0 1px #ffe84f85; */
+    border-bottom: 1px solid #ffe84f85;
+    padding: 43px;
+  }
+  .get-to .get-head,
+  .get-to .get-num {
+    display: flex;
+    align-items: center;
+    height: fit-content;
+    width: 100%;
+    background-color: rgba(0, 255, 255, 0);
+  }
+
+  .get-head .in .one {
+    font-size: 30px;
+    font-weight: 900;
+  }
+  .get-head .in .one span {
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: -5px;
+    display: block;
+    margin-left: 0;
+  }
+  .get-head .in .two {
+    font-size: 20px;
+    font-weight: normal;
+  }
+
+  .get-to .side {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: rgba(0, 255, 255, 0);
+    font-size: 52px;
+    font-weight: normal;
+  }
+  .get-para .in {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: fit-content;
+  }
+  .get-para .in div,
+  .get-det .in {
+    margin-top: 20px;
+  }
+  .get-det .in {
+    font-size: 13px;
+  }
+  .get-det .in .lef div,
+  .get-det .in .rig div {
+    margin-top: 18px;
+  }
+  .get-to .get-num {
+    justify-content: center;
+    height: fit-content;
+  }
+  .get-num .in {
+    /* background-color: rgba(0, 255, 255, 0); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .get-num .in .col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 300;
+    margin-top: 50px;
+  }
+  .get-num .in .col .titl {
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .get-num .in {
+    flex-direction: row;
+  }
+  .get-to {
+    background-color: rgba(0, 255, 255, 0);
+    grid-template-columns: auto;
+    padding: 0 150px 80px 150px;
+  }
+  .get-to .main .get-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .get-para .in div,
+  .get-det .in {
+    margin-top: 40px;
+  }
+  .get-to .get-head {
+    position: relative;
+    width: 100%;
+  }
+  .get-head .in .one {
+    font-size: 30px;
+    font-weight: 900;
+    display: flex;
+    align-items: baseline;
+  }
+  .get-head .in .one span {
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: -5px;
+    display: block;
+  }
+  .get-head .in .two {
+    font-size: 20px;
+    font-weight: normal;
+  }
+  .get-to .side {
+    justify-content: flex-start;
+    background-color: rgba(0, 255, 255, 0);
+    font-size: 40px;
+    font-weight: normal;
+  }
+
+  .get-to .get-num {
+    justify-content: center;
+  }
+  .get-to .get-num .in {
+    width: 100%;
+  }
+
+  .get-to .get-head::before {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 1px;
+    bottom: 0;
+    background-color: #eef6f838;
+  }
+  .get-to .get-num .mark {
+    display: block;
+    position: absolute;
+    left: 0;
+    color: #ffe84f;
+    font-size: 15px;
+    font-family: Century Gothic;
+    text-decoration: underline;
+    bottom: -80px;
+  }
+}
+@media screen and (min-width: 993px) {
+  .get-body {
+    height: 250px;
+  }
+  .get-head .in .one {
+    display: flex;
+    align-items: baseline;
+  }
+  .get-body .get-para,
+  .get-body .get-det,
+  .get-to .get-head {
+    /* border-right: 1px solid #ffe84f85; */
+    position: relative;
+    /* padding: 20px; */
+  }
+  .get-body .get-para .in {
+    font-size: 15px;
+    font-family: "Raleway", sans-serif;
+    font-weight: lighter;
+  }
+  .get-body .get-det .in {
+    justify-content: center !important;
+  }
+  .get-body .get-para .in,
+  .get-to .get-head .in {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 255, 255, 0);
+    /* border: 1px solid rgb(255, 255, 255); */
+    box-sizing: border-box;
+  }
+  .get-body .get-det::before,
+  .get-to .get-head::before,
+  .get-body .get-para::before {
+    content: "";
+    position: absolute;
+  }
+
+  /* .get-body .get-det::before,
+  .get-to .get-head::before {
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 50%;
+    background-color: #ffe84f85;
+    transform: translateX(-50%);
+  } */
+  .get-body .get-para::before {
+    width: 1px;
+    height: 90%;
+    right: 0;
+    top: 50%;
+    background-color: #ffe84f85;
+    transform: translateY(-50%);
+  }
+  .get-to .get-num .mark {
+    display: block;
+    position: absolute;
+    left: 0;
+    color: #ffe84f;
+    font-size: 15px;
+    font-family: Century Gothic;
+    text-decoration: underline;
+    bottom: 0;
+  }
+  .newline {
+    opacity: 1;
+  }
+}
+@media screen and (min-width: 1201px) {
+  .get-to .main {
+    padding-right: 100px;
+  }
+}

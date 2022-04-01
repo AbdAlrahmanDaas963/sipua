@@ -1,0 +1,75 @@
+.PorfHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+}
+.back-btn {
+  position: absolute;
+  left: 100px;
+  top: 70px;
+  z-index: 2;
+}
+.back-btn:hover {
+  transform: scale(1.1);
+}
+.HeaderTit {
+  font-size: 37.9px;
+  color: #eef6f8;
+}
+.HeaderDesc {
+  font-size: 15px;
+  text-transform: capitalize;
+  font-family: "Raleway", sans-serif;
+  color: #eef6f86e;
+  max-width: 70%;
+  margin-top: 10px;
+}
+.webdesign {
+  background-color: #1c1e22;
+  display: grid;
+  grid-template-rows: 25% 55% 20%;
+}
+.webdesign .fo {
+  /* border: 1px solid aqua; */
+  position: relative;
+}
+.fo button {
+  font-family: "Raleway", sans-serif;
+  color: #eef6f8;
+
+  background-color: #ffffff00;
+  border: 1px solid #eef6f8;
+  padding: 19px 25px;
+  border-radius: 20px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 768px) {
+  .webdesign {
+    background-color: #1c1e22;
+    display: grid;
+    grid-template-rows: 30% 50% 20%;
+  }
+  .back-btn {
+    position: absolute;
+    left: 30px;
+    top: 70px;
+  }
+  .HeaderDesc {
+    text-align: center;
+  }
+  .PorfHeader {
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 992px) {
+}
+@media screen and (min-width: 993px) {
+}

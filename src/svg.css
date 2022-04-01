@@ -1,123 +1,7 @@
-body {
-  margin: 0;
-  box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  cursor: url(svg/mouse.svg) 5 5, auto;
-  background-color: #191b1e;
-  color: white;
-  font-family: "Cinzel", serif;
-  overflow-x: hidden;
-}
-html {
-  scroll-behavior: smooth;
-}
-a {
-  width: 20px;
-  height: 20px;
-  text-align: center;
-  color: inherit;
-  text-decoration: none;
-}
-input,
-textarea {
-  outline: 0;
-}
-.cursor {
-  position: fixed;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background-color: #ffe84f;
-  /* background-color: #ffe84f00; */
-  mix-blend-mode: difference;
-  transition: 0.1s ease-out;
-  transform: (-50%, -50%);
-  pointer-events: none;
-  z-index: 2;
-}
-.App {
-  position: relative;
-}
-
-::-webkit-scrollbar {
-  width: 4px;
-  background: rgba(0, 0, 0, 0);
-}
-/* Track */
-::-webkit-scrollbar-track {
-  background: rgb(0, 0, 0);
-}
-/* Handle */
-::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background: #d4d4d4;
-}
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  width: 5px;
-  background: #ffe84f;
-  box-shadow: 0 0 5px black;
-  border-radius: 10px;
-}
-
-::-moz-selection {
-  /* Code for Firefox */
-  color: #ffe84f;
-  background: black;
-}
-
-::selection {
-  color: white;
-  background: #446ee2;
-}
-.lin a {
-  box-sizing: border-box;
-  padding: 5px;
-}
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-p {
-  margin: 0;
-  font-size: 13px;
-}
-ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.all {
-  width: 100%;
-  position: relative;
-  overflow-x: hidden;
-}
-
-.back {
-  position: absolute;
-  z-index: -1;
-  width: 100%;
-  height: 150vh;
-  background: radial-gradient(at 10% 10%, #434447, #191b1e, #191b1e);
-  /* background: radial-gradient(at 10% 10% ,#fff67a,#ffe23d , #f0bf21); */
-  background-repeat: no-repeat;
-  opacity: 1;
-  /* filter: contrast(300%) brightness(90%); */
-}
-.top {
-  z-index: -1;
-}
-
-/* -------------------------------- */
 .fourth {
   width: 100%;
   min-height: 100vh;
-  background-color: rgb(209, 209, 209);
+  background-color: #fff;
 }
 @-webkit-keyframes grain {
   0%,
@@ -374,10 +258,11 @@ ul {
 blink {
   /* background: url(http://placekitten.com/g/600/600); */
   display: block;
+  height: 80vh;
   position: relative;
   width: 100%;
   overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0);
 }
 blink > * {
   z-index: 2;
@@ -396,17 +281,5 @@ blink:after {
   top: -100%;
   width: 300%;
   z-index: 1;
-  filter: contrast(350%) brightness(1%);
-}
-
-.notfound {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  min-height: 100vh;
-  color: rgb(161, 161, 161);
-  background-color: #000000;
-  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
-  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  background-color: #2e0f6136;
 }
