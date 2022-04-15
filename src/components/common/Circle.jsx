@@ -9,10 +9,8 @@ function Circle({ title, img, to, delay }) {
   useEffect(() => {
     if (inView) {
       main.start("animate");
-      console.log("first");
     } else {
       main.start("initial");
-      console.log("secound");
     }
   }, [inView]);
 
@@ -36,6 +34,5 @@ function Circle({ title, img, to, delay }) {
     </Link>
   );
 }
-// "react-router": "^5.2.1",
-// "react-router-dom": "^5.3.0"
+
 export default Circle;

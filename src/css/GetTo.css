@@ -142,12 +142,30 @@
   align-items: center;
   justify-content: center;
 }
+.theline-ver {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 1px;
+  height: 90%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .newline {
   /* background-color: #ffe84f; */
   background-color: #ffe84f;
   width: 100%;
   height: 1px;
   opacity: 0;
+}
+.newline-ver {
+  /* background-color: #ffe84f; */
+  background-color: #ffe84f;
+  width: 1px;
+  height: 90%;
+  opacity: 1;
 }
 @media screen and (max-width: 767px) {
   .get-body {
@@ -238,6 +256,9 @@
     text-align: center;
     margin-top: 20px;
   }
+  .theline-ver {
+    display: none;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .get-num .in {
@@ -301,7 +322,7 @@
     background-color: #eef6f838;
   }
   .get-to .get-num .mark {
-    display: block;
+    display: none;
     position: absolute;
     left: 0;
     color: #ffe84f;
@@ -309,6 +330,9 @@
     font-family: Century Gothic;
     text-decoration: underline;
     bottom: -80px;
+  }
+  .theline-ver {
+    display: none;
   }
 }
 @media screen and (min-width: 993px) {
@@ -368,11 +392,11 @@
     height: 90%;
     right: 0;
     top: 50%;
-    background-color: #ffe84f85;
+    background-color: #ffe84f00;
     transform: translateY(-50%);
   }
   .get-to .get-num .mark {
-    display: block;
+    display: none;
     position: absolute;
     left: 0;
     color: #ffe84f;

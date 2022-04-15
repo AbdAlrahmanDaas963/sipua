@@ -2,12 +2,10 @@ import React from "react";
 import { Link, useRouteMatch } from "react-router-dom";
 
 function Case({ title, desc, img }) {
-  let { path, url } = useRouteMatch();
+  let { url } = useRouteMatch();
   function handleClick() {
-    try {
-      const shCa = document.getElementById("Showcase");
-      // shCa.style.display = "none";
-    } catch (error) {}
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
   }
   return (
     <div className="case">
@@ -34,12 +32,3 @@ function Case({ title, desc, img }) {
 }
 
 export default Case;
-
-/*
-  img
-  title
-  desc
-  more
-  border
-*/
-// check the url {from sub component} --> if in show => hide nav : show nav

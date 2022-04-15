@@ -1,5 +1,5 @@
-import React, { useState, useEffect, createRef } from "react";
-import { motion } from "framer-motion";
+import React, { useState, useEffect } from "react";
+import { motion, useTransform, useViewportScroll } from "framer-motion";
 
 import Linkss from "./common/Linkss";
 import Href from "./common/Href";
@@ -7,11 +7,6 @@ import Href from "./common/Href";
 function Navbar() {
   const [state, setstate] = useState(true);
   const [flipFlop, setflipFlop] = useState(true);
-  const [animate, setanimate] = useState({
-    x: 0,
-    opacity: 1,
-    transition: { duration: ".5", transitionTimingFunction: "easeOutBack" },
-  });
 
   const [clicks, setClicks] = useState([
     { id: 0, href: "Home", statues: true },
@@ -20,30 +15,20 @@ function Navbar() {
     { id: 3, href: "Services", statues: false },
     { id: 5, href: "Contact", statues: false },
   ]);
-  // { id: 4, href: "resources", statues: false },
 
-  useEffect(() => {
-    if (window.innerWidth < 1201) {
-      setanimate({ x: "0", opacity: 0 });
-    } else {
-      setanimate({
-        x: 0,
-        opacity: 1,
-        transition: { duration: ".5", transitionTimingFunction: "easeOutBack" },
-      });
-    }
-  }, []);
+  // progress
+  const { scrollYProgress } = useViewportScroll();
+  const initial = useTransform(scrollYProgress, (x) => x + 0.05);
+
   function handleSlide() {
     setstate(!state);
     const silde = document.getElementById("Slide");
 
     if (state) {
-      console.log(state, " true");
       silde.style.height = "100vh";
       silde.style.borderBottomRightRadius = "0";
       silde.style.borderBottomLeftRadius = "0";
     } else {
-      console.log(state, " false");
       silde.style.height = "0";
       silde.style.borderBottomRightRadius = "50%";
       silde.style.borderBottomLeftRadius = "50%";
@@ -84,12 +69,9 @@ function Navbar() {
     setClicks(clone);
   }
 
-  let screen = window.innerWidth;
   const [navAnim, setnavAnim] = useState({});
   useEffect(() => {
-    console.log("screen ", screen);
     if (window.innerWidth > 1200) {
-      console.log(">");
       setnavAnim({
         initial: {
           x: "200px",
@@ -104,9 +86,7 @@ function Navbar() {
           },
         },
       });
-      console.log(navAnim);
     } else {
-      console.log("less");
       setnavAnim({
         initial: {
           y: "200px",
@@ -121,9 +101,6 @@ function Navbar() {
           },
         },
       });
-      setTimeout(() => {
-        console.log(navAnim);
-      }, 500);
     }
   }, [window.innerWidth]);
 
@@ -134,7 +111,17 @@ function Navbar() {
       initial="initial"
       animate="animate"
     >
-      <div className="progress" id="Progress"></div>
+      <motion.div
+        style={{
+          width: 1,
+          height: "100%",
+          background: "#FFE84F",
+          scaleY: initial,
+          originY: 0,
+        }}
+        className="progress"
+        id="Progress"
+      ></motion.div>
       <div className="navbar">
         <div className="logo">
           <div className="in">Sipua</div>

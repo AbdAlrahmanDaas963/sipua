@@ -1,6 +1,6 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router";
-import { Link, useRouteMatch, useHistory } from "react-router-dom";
+import { useRouteMatch, useHistory } from "react-router-dom";
 import { motion, useAnimation } from "framer-motion";
 
 import BackBtn from "./../common/BackBtn";
@@ -8,17 +8,9 @@ import darkSvg from "../../svg/dark.svg";
 import topSvg from "../../svg/top.svg";
 
 function Show({ onclick }) {
-  const card = useAnimation();
-  const [flip, setflip] = useState("animate");
   const [dark, setDark] = useState(0);
-
-  let { path, url } = useRouteMatch();
   const location = useLocation();
   let history = useHistory();
-
-  console.log("first", location.state);
-
-  useEffect(() => {}, []);
 
   function handleClick() {
     try {

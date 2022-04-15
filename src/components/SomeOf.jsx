@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { Router, Link } from "react-router-dom";
 
 import Circle from "./common/Circle";
 import Spy from "./ScrollSpy/Spy";
@@ -13,10 +12,8 @@ function SomeOf() {
   useEffect(() => {
     if (inView) {
       main.start("animate");
-      console.log("first");
     } else {
       main.start("initial");
-      console.log("secound");
     }
   }, [inView]);
 

@@ -149,6 +149,7 @@ div#home:hover ~ .slide .tabs ul li a span {
     padding-left: 20px;
   }
   .sub-nav .progress {
+    display: none;
     right: 0;
     bottom: 0;
     width: 16.6%;

@@ -15,13 +15,33 @@
   background-image: linear-gradient(1deg, black 50%, #191b1e00 50%);
 }
 .what-i-para {
-  width: 271px;
-  height: 100%;
   box-sizing: border-box;
+  padding: 5px 5px 0 5px;
+  width: 271px;
+  height: fit-content;
+  position: relative;
+  box-sizing: content-box;
   border: 1px solid transparent;
+  overflow: visible;
+  background-color: #00ffff00;
+}
+.what-i-para:hover {
+  z-index: 2;
+  /* margin: 10px; */
+}
+.what-i-para .windows {
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  /* background: rgba(187, 40, 40, 0.314); */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
   border: none;
   border-radius: 0px;
-  background: black;
+  background: rgba(0, 0, 0, 0);
+  color: white;
   border: 1px solid transparent;
 }
 .what-head {

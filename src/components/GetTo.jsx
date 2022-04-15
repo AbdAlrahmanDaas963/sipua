@@ -8,6 +8,7 @@ function GetTo() {
   const main = useAnimation();
   const Par = useAnimation();
   const line = useAnimation();
+  const lineVer = useAnimation();
   const one = useAnimation();
   const two = useAnimation();
   const three = useAnimation();
@@ -18,6 +19,7 @@ function GetTo() {
       main.start("animate");
       Par.start("animate");
       line.start("animate");
+      lineVer.start("animate");
       one.start("animate");
       two.start("animate");
       three.start("animate");
@@ -25,6 +27,7 @@ function GetTo() {
       main.start("initial");
       Par.start("initial");
       line.start("initial");
+      lineVer.start("initial");
       one.start("initial");
       two.start("initial");
       three.start("initial");
@@ -94,6 +97,18 @@ function GetTo() {
       },
     },
   };
+  const lineVerVar = {
+    initial: {
+      height: "0px",
+    },
+    animate: {
+      height: "90%",
+      transition: {
+        duration: 1,
+        delay: 1,
+      },
+    },
+  };
   return (
     <motion.div
       animate={main}
@@ -124,6 +139,13 @@ function GetTo() {
         </motion.div>
         <motion.div className="get-body" animate={three} variants={threeVar}>
           <div className="get-para">
+            <div className="theline-ver">
+              <motion.div
+                className="newline-ver"
+                variants={lineVerVar}
+                animate={lineVer}
+              ></motion.div>
+            </div>
             <motion.div className="in" variants={ParVar} animate={Par}>
               <div className="para-p1">
                 In addition of overthinking I spend my time turning ideas into

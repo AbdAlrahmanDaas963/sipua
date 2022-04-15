@@ -255,7 +255,7 @@
     transform: translate(-10%, 10%);
   }
 }
-blink {
+.blink {
   /* background: url(http://placekitten.com/g/600/600); */
   display: block;
   height: 80vh;
@@ -264,10 +264,10 @@ blink {
   overflow: hidden;
   background-color: rgba(255, 255, 255, 0);
 }
-blink > * {
+.blink > * {
   z-index: 2;
 }
-blink:after {
+.blink:after {
   -webkit-animation: grain 5s steps(10) infinite;
   -moz-animation: grain 5s steps(10) infinite;
   -ms-animation: grain 5s steps(10) infinite;

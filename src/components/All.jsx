@@ -25,13 +25,13 @@ function All() {
 
   // uncomment this top enable 'follower mouse'
   const refCur = React.useRef();
-  // setTimeout(() => {
-  //   const cursor = document.getElementById("Cursor");
-  //   document.addEventListener("mousemove", (e) => {
-  //     cursor.style.left = e.clientX - 10 + "px";
-  //     cursor.style.top = e.clientY + "px";
-  //   });
-  // }, 200);
+  setTimeout(() => {
+    const cursor = document.getElementById("Cursor");
+    document.addEventListener("mousemove", (e) => {
+      cursor.style.left = e.clientX - 10 + "px";
+      cursor.style.top = e.clientY + "px";
+    });
+  }, 200);
 
   return (
     <motion.div className="all" id="All">

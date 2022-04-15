@@ -1,7 +1,7 @@
 .some-of {
   display: grid;
-  background-color: rgba(0, 0, 0, 0);
   align-content: center;
+  min-height: 720px;
 }
 .circles {
   height: 160px;
@@ -58,11 +58,17 @@
   align-items: center;
 }
 /* ----------------------------------------- */
-
+@media screen and (max-height: 720px) {
+  .circles {
+    min-height: 510px;
+    height: 510px;
+  }
+}
 @media screen and (max-width: 768px) {
   .some-of {
     grid-template-columns: auto;
-    height: 110vh;
+    /* min-height: 720px;
+    height: 110vh; */
   }
   .circles {
     min-height: 70vh;

@@ -13,17 +13,8 @@ import Spy from "./ScrollSpy/Spy";
 
 function Landing() {
   const { scrollY } = useViewportScroll();
-  console.log("useViewportScroll()", useViewportScroll());
-  console.log("scrollY", scrollY.current);
-
   const y1 = useTransform(scrollY, [0, 300], [0, 500]);
-
   const rotate1 = useTransform(scrollY, [0, 300], [0, 10]);
-
-  useEffect(() => {
-    console.log("current y1", scrollY.current);
-  }, [y1]);
-
   const main = useAnimation();
   const link = useAnimation();
   const Left = useAnimation();

@@ -28,7 +28,13 @@ function Contact2() {
       setTrueEmail(tru);
     }
   }
-
+  function handleChange(e) {
+    const text = textRef.current.value;
+    const lines = text.split("\n");
+    const count = lines.length;
+    console.log("count: ", count);
+    if (count < 6) textRef.current.rows = count;
+  }
   const controls = useAnimation();
   return (
     <motion.div
@@ -64,9 +70,8 @@ function Contact2() {
               <div className="contact-title">Message</div>
               <textarea
                 ref={textRef}
-                onFocus={() => (textRef.current.rows = "8")}
-                onBlur={() => (textRef.current.rows = "2")}
                 className="text-input text-area input"
+                onChange={(e) => handleChange(e)}
                 type="text"
                 cols="10"
                 rows="2"
@@ -90,3 +95,7 @@ I open on Wednesday and Tuesday"
 }
 
 export default Contact2;
+
+// text area
+// onFocus={() => (textRef.current.rows = "8")}
+// onBlur={() => (textRef.current.rows = "2")}

@@ -6,6 +6,7 @@ import ComingSoon from "./components/ComingSoon/ComingSoon";
 import NotFound from "./components/NotFound";
 import Contact2 from "./components/Contact/Contact2";
 import ShowCase from "./components/ShowCase/ShowCase";
+import AllShows from "./components/ShowCase/AllShows";
 
 function App() {
   return (
@@ -25,9 +26,9 @@ function App() {
         <Route path="/Sipua_V2/ComingSoon" component={() => <ComingSoon />} />
 
         <Route path="/Sipua_V2/webdesign" component={() => <WebDesign />} />
-        <Route path="/Sipua_V2/ShowCase" component={() => <ShowCase />} />
+        <Route path="/Sipua_V2/ShowCase" component={() => <AllShows />} />
 
-        <Route component={() => <NotFound />} />
+        <Route component={() => <ComingSoon />} />
       </Switch>
     </div>
   );

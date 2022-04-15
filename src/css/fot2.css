@@ -46,8 +46,8 @@ a {
 .footer-body {
   display: flex;
   flex-direction: column;
-  background-color: #041335a4;
-  filter: contrast(130%) drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.507));
+  background-color: #292e39;
+  /* filter: contrast(130%) drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.507)); */
   height: 100%;
   padding: 50px 0 0 50px;
 }
@@ -69,7 +69,20 @@ a {
   width: 300px;
   height: 10%;
 }
-.body-in .little-form {
+.little-form button {
+  margin-top: 10px;
+  background: rgba(238, 246, 248, 0.36);
+  height: 40px;
+  width: 150px;
+  border: 1px solid #eef6f8;
+  box-sizing: border-box;
+  border-radius: 7px;
+  font-family: "Cinzel";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 27px;
+  color: #eef6f8;
 }
 .little-form > :nth-child(1) {
   font-size: 15px;
@@ -79,9 +92,10 @@ a {
   margin-top: 10px;
   border: 1px solid white;
   border-radius: 7px;
-  height: 30px;
+  height: 40px;
   width: 258px;
   background: #eef6f811;
+  padding: 0 10px;
 }
 .little-form > :nth-child(2)::placeholder {
   color: rgba(255, 255, 255, 0.199);
@@ -118,8 +132,8 @@ a {
   .section,
   .section .glit,
   .foot2,
-  blink {
-    height: 170vh;
+  .blink {
+    height: 180vh;
   }
   .footer-body {
     padding-left: 50px;
