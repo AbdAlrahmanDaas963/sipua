@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { urls } from "../../config/Urls";
+
 function Href({ id, href, clicked, statues }) {
   const controls = useAnimation();
 
@@ -24,7 +25,7 @@ function Href({ id, href, clicked, statues }) {
   };
   const href2 = `${urls.main}/#${href}`;
   return (
-    <a href={`/#${href}`} onClick={() => clicked(id)} id={id}>
+    <a href={`/Sipua_V2/#${href}`} onClick={() => clicked(id)} id={id}>
       {" "}
       <motion.span id={`span${id}`}></motion.span> {href}
     </a>

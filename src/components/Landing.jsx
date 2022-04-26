@@ -152,10 +152,14 @@ function Landing() {
                 <p>I do art & UX/UI</p>
               </motion.div>
             </div>
-            <motion.div onClick={() => console.log("object")} className="talk">
+            <motion.a
+              href={`/Sipua_V2/LetsTalk`}
+              onClick={() => console.log("object")}
+              className="talk"
+            >
               {" "}
               Let's Talk
-            </motion.div>
+            </motion.a>
           </div>
         </div>
         <motion.div

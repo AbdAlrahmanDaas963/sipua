@@ -1,0 +1,177 @@
+.lets-talk {
+  background-color: #00ffff00;
+  height: 100vh;
+  min-height: 600px;
+  max-height: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+.lets-talk-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  height: 190px;
+
+  font-family: "Cinzel";
+  font-style: normal;
+  font-weight: 700;
+  line-height: 34px;
+  text-align: center;
+  color: #eef6f8;
+}
+.lets-talk-head div:nth-child(1) {
+  font-size: 35px;
+}
+.lets-talk-head div:nth-child(2) {
+  font-size: 19px;
+}
+.form-talk {
+  /* border: 2px solid rgba(239, 239, 95, 0.267); */
+  min-height: 400px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+}
+.lets-talk-first,
+.lets-talk-secound {
+  width: 600px;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* border: 1px solid rgba(255, 255, 0, 0.236); */
+
+  display: flex;
+  flex-direction: column;
+}
+.lets-talk-in {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 35% 65%;
+  gap: 30px;
+  align-items: center;
+}
+.lets-talk-in .left-col,
+.lets-talk-in .right-col {
+  height: 300px;
+  display: grid;
+  grid-template-rows: 100px 100px 100px;
+  align-items: flex-start;
+}
+.lets-talk-in .left-col {
+  justify-items: flex-end;
+}
+.lets-talk-in .right-col {
+  justify-items: flex-start;
+}
+.left-col div {
+  font-family: "Cinzel";
+  font-size: 30px;
+  line-height: 44px;
+  font-weight: 300;
+  color: #eef6f8;
+}
+.checkboxes {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.checkbox-row {
+  display: flex;
+  flex-direction: row;
+}
+/* -==--=-=-=-=-=-=-=-=-=-=-=-= */
+.checkboxes .checkbox-row input[type="text"] {
+  height: 44px !important;
+  border: 1px solid red !important;
+}
+/* -==--=-=-=-=-=-=-=-=-=-=-=-= */
+.lets-talk-btn {
+  /* border: 1px solid rgba(255, 255, 0, 0.236); */
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.lets-talk-btn button {
+  width: 148px;
+  height: 58px;
+  font-family: "Cinzel";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 23px;
+  line-height: 31px;
+}
+.lets-talk-btn .next {
+  background: rgba(238, 246, 248, 0.08);
+  border: 1px solid #eef6f8;
+  color: #eef6f8;
+}
+.lets-talk-btn .send {
+  background: #ffe84f;
+  border: 0;
+  font-weight: 700;
+  color: #1e2023;
+}
+.pix-progress {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.pix-progress .pix {
+  width: 56px;
+  height: 13px;
+  margin: 0 5px;
+  /* White */
+
+  background: #eef6f8;
+  border-radius: 54px;
+}
+
+.right-col-small .hide-small {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .lets-talk-in .left-col {
+    display: none;
+  }
+  .lets-talk-in {
+    grid-template-columns: auto;
+    gap: 0;
+    align-content: center;
+    justify-content: center;
+  }
+  .lets-talk-in .right-col {
+    height: 400px;
+  }
+  .right-col-small .hide-small {
+    display: block;
+    font-family: "Cinzel";
+    font-size: 30px;
+    line-height: 44px;
+    font-weight: 300;
+    color: #eef6f8;
+  }
+}
+
+@media screen and (max-height: 768px) {
+  .lets-talk {
+    min-height: 768px;
+  }
+}

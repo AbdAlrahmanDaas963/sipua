@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 function ContactInput({ type, validate, error, placeholder }) {
   window.Buffer = window.Buffer || require("buffer").Buffer;
