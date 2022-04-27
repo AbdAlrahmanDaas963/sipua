@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import First from "./First";
 import Secound from "./Secound";
 
+import { urls } from "../../config/Urls";
+import BackBtn from "../common/BackBtn";
 import "./letsTalk.css";
 
 function LetsTalk() {
@@ -52,9 +54,10 @@ function LetsTalk() {
     console.log("secoundData", secoundData);
     console.log("send it");
   }
-
+  console.log(urls.main);
   return (
     <div className="lets-talk">
+      <BackBtn to={`/${urls.main}`} />
       <div className="lets-talk-head">
         <div>{title.one}</div>
         <div>{title.two}</div>
@@ -73,4 +76,4 @@ function LetsTalk() {
 
 export default LetsTalk;
 
-// work with the checkboxes and check the secound form ith the new style
+// work with the checkboxes

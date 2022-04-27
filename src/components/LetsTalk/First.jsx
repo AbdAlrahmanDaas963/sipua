@@ -1,6 +1,7 @@
 import React, { useRef, forwardRef } from "react";
 import ContactInput from "../Contact/common/ContactInput";
 import { motion } from "framer-motion";
+import CheckBox from "./common/CheckBox";
 
 function First({ statues, handleNextClick }) {
   // const input = React.forwardRef();
@@ -30,7 +31,7 @@ function First({ statues, handleNextClick }) {
           <div className="right-col-small">
             <div className="hide-small">Name</div>
             <input
-              className={`text-input input`}
+              className={`text-input input lets-talk-input`}
               type="text"
               name=""
               id="lets-talk-name"
@@ -40,7 +41,7 @@ function First({ statues, handleNextClick }) {
           <div className="right-col-small">
             <div className="hide-small">Industry</div>
             <input
-              className={`text-input input`}
+              className={`text-input input lets-talk-input`}
               type="text"
               name=""
               id="lets-talk-industry"
@@ -50,45 +51,10 @@ function First({ statues, handleNextClick }) {
           <div className="checkboxes">
             <div className="right-col-small">
               <div className="hide-small">Intersted in</div>
-              <div className="checkbox-row">
-                <input
-                  type="checkbox"
-                  name="intersted"
-                  id="inter-coll"
-                  value={"Collaboration"}
-                />
-                <div className="checkbox-label">Collaboration</div>
-              </div>
-
-              <div className="checkbox-row">
-                <input
-                  type="checkbox"
-                  name="intersted"
-                  id="inter-work"
-                  value={"Work"}
-                />
-                <div className="checkbox-label">Work</div>
-              </div>
-
-              <div className="checkbox-row">
-                <input
-                  type="checkbox"
-                  name="intersted"
-                  id="inter-ques"
-                  value={"Ask question"}
-                />
-                <div className="checkbox-label">Ask question</div>
-              </div>
-
-              <div className="checkbox-row">
-                <input
-                  type="checkbox"
-                  name="intersted"
-                  id="inter-othe"
-                  value={"Other"}
-                />
-                <div className="checkbox-label">Other</div>
-              </div>
+              <CheckBox label="Collaboration" id="inter-coll" />
+              <CheckBox label="Work" id="inter-work" />
+              <CheckBox label="Ask question" id="inter-ques" />
+              <CheckBox label="Other" id="inter-othe" />
             </div>
           </div>
         </div>

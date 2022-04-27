@@ -86,17 +86,40 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+  align-self: flex-end;
 }
+
+.checkbox-row .checkbox-label {
+  font-family: "Century Gothic";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 22px;
+  color: #eef6f8;
+  opacity: 0.6;
+  margin-left: 5px;
+}
+/* ---------------------------- */
 .checkbox-row {
   display: flex;
   flex-direction: row;
 }
-/* -==--=-=-=-=-=-=-=-=-=-=-=-= */
-.checkboxes .checkbox-row input[type="text"] {
+
+/* input[type="checkbox"] {
+  visibility: hidden;
+} */
+
+/* ---------------------------- */
+.lets-talk-input {
+  width: 100%;
   height: 44px !important;
-  border: 1px solid red !important;
+  color: #eef6f8;
+  height: 30px;
+  font-family: Century Gothic;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
 }
-/* -==--=-=-=-=-=-=-=-=-=-=-=-= */
 .lets-talk-btn {
   /* border: 1px solid rgba(255, 255, 0, 0.236); */
   width: 100%;
@@ -147,6 +170,50 @@
 .right-col-small .hide-small {
   display: none;
 }
+.right-col-small {
+  width: 285px;
+}
+
+.custome-checkbox-container {
+  border: 1px solid rgba(191, 255, 0, 0);
+  position: relative;
+  height: 20px;
+}
+.custome-checkbox-container input {
+  visibility: hidden;
+  position: absolute;
+  right: 30px;
+  z-index: -1;
+}
+.custome-checkbox {
+  position: absolute;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border: 1px solid rgba(238, 246, 248, 0.5);
+  box-sizing: border-box;
+}
+.checked {
+  background: #c4c4c4;
+}
+.custome-checkbox-label {
+  position: absolute;
+  left: 20px;
+  font-family: "Century Gothic";
+  font-style: normal;
+  font-weight: 200;
+  font-size: 16px;
+  line-height: 22px;
+  color: #eef6f8;
+  opacity: 0.6;
+  margin-left: 5px;
+  white-space: nowrap;
+}
+.custome-checkbox,
+.custome-checkbox-label {
+  top: 50%;
+  transform: translateY(-50%);
+}
 @media screen and (max-width: 768px) {
   .lets-talk-in .left-col {
     display: none;
@@ -156,9 +223,12 @@
     gap: 0;
     align-content: center;
     justify-content: center;
+    height: fit-content;
+    padding: 50px 0 0 0;
   }
   .lets-talk-in .right-col {
     height: 400px;
+    gap: 40px;
   }
   .right-col-small .hide-small {
     display: block;
@@ -167,6 +237,14 @@
     line-height: 44px;
     font-weight: 300;
     color: #eef6f8;
+  }
+  .right-col-small {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+  .lets-talk-input {
+    margin: 0;
   }
 }
 

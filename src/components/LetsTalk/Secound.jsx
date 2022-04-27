@@ -27,27 +27,36 @@ function Secound({ statues, handleSendClick }) {
           <div>Note</div>
         </div>
         <div className="right-col">
-          <input
-            className={`text-input input`}
-            type="text"
-            name=""
-            id="lets-talk-email"
-            placeholder="Elon_tusk@gmail.com"
-          />
-          <input
-            className={`text-input input`}
-            type="text"
-            name=""
-            id="lets-talk-phone"
-            placeholder="+963999999999"
-          />
-          <input
-            className={`text-input input`}
-            type="text"
-            name=""
-            id="lets-talk-note"
-            placeholder="Van gogh"
-          />
+          <div className="right-col-small">
+            <div className="hide-small">Email</div>
+            <input
+              className={`text-input input lets-talk-input`}
+              type="text"
+              name=""
+              id="lets-talk-email"
+              placeholder="Elon_tusk@gmail.com"
+            />
+          </div>
+          <div className="right-col-small">
+            <div className="hide-small">Phone</div>
+            <input
+              className={`text-input input lets-talk-input`}
+              type="text"
+              name=""
+              id="lets-talk-phone"
+              placeholder="+963999999999"
+            />
+          </div>
+          <div className="right-col-small">
+            <div className="hide-small">Note</div>
+            <input
+              className={`text-input input lets-talk-input`}
+              type="text"
+              name=""
+              id="lets-talk-note"
+              placeholder="Van gogh"
+            />
+          </div>
         </div>
       </div>
 
