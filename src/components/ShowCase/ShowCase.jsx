@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+
+import { urls } from "../../config/Urls";
 import { getData } from "./services/fakeCasesService";
 import Case from "./Case";
 import PorfHeader from "../common/PorfHeader";
@@ -20,7 +22,7 @@ export default function ShowCase() {
   return (
     <>
       <div className="showcase" id="Showcase" ref={ref}>
-        <BackBtn to={"/Sipua_V2/#Porfolio"} />
+        <BackBtn to={`/${urls.main}/#Porfolio`} />
         <PorfHeader
           title={"Showcase"}
           desc={

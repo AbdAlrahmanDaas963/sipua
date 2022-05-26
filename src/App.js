@@ -1,6 +1,7 @@
 import All from "./components/All";
 import { Route, Switch, Redirect, Link } from "react-router-dom";
 
+import { urls } from "./config/Urls";
 import WebDesign from "./components/WebDesign";
 import ComingSoon from "./components/ComingSoon/ComingSoon";
 import NotFound from "./components/NotFound";
@@ -22,13 +23,20 @@ function App() {
       {/* <WebDesign /> */}
 
       <Switch>
+        <Route path="/sipua-ghPages/LetsTalk" component={() => <LetsTalk />} />
         <Route path="/" exact component={() => <All />} />
-        <Route path="/Sipua_V2" exact component={() => <All />} />
-        <Route path="/Sipua_V2/ComingSoon" component={() => <ComingSoon />} />
+        <Route path="/sipua-ghPages" exact component={() => <All />} />
+        <Route
+          path="/sipua-ghPages/ComingSoon"
+          component={() => <ComingSoon />}
+        />
 
-        <Route path="/Sipua_V2/webdesign" component={() => <WebDesign />} />
-        <Route path="/Sipua_V2/ShowCase" component={() => <AllShows />} />
-        <Route path="/Sipua_V2/LetsTalk" component={() => <LetsTalk />} />
+        <Route
+          path="/sipua-ghPages/webdesign"
+          component={() => <WebDesign />}
+        />
+        <Route path="/sipua-ghPages/ShowCase" component={() => <AllShows />} />
+        <Route path="/sipua-ghPages/LetsTalk" component={() => <LetsTalk />} />
 
         <Route component={() => <ComingSoon />} />
       </Switch>

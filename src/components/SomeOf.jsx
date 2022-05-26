@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
+import { urls } from "../config/Urls";
 import Circle from "./common/Circle";
 import Spy from "./ScrollSpy/Spy";
 import img from "./img/unsplash.png";
@@ -38,14 +39,19 @@ function SomeOf() {
         <Circle
           title={"UX/UI"}
           img={img}
-          to={"/Sipua_V2/webdesign"}
+          to={`/${urls.main}/webdesign`}
           delay={"0.2"}
         />
-        <Circle title={"ART"} img={img} to={"/Sipua_V2/web"} delay={"0.4"} />
+        <Circle
+          title={"ART"}
+          img={img}
+          to={`/${urls.main}/web`}
+          delay={"0.4"}
+        />
         <Circle
           title={"SHOWCASE"}
           img={img}
-          to={"/Sipua_V2/ShowCase"}
+          to={`/${urls.main}/ShowCase`}
           delay={"0.6"}
         />
       </div>

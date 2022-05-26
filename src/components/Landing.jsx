@@ -7,6 +7,7 @@ import {
 } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
+import { urls } from "../config/Urls";
 import Linkss from "./common/Linkss";
 import fram from "./img/image-from-rawpixel-id-1230651-original.png";
 import Spy from "./ScrollSpy/Spy";
@@ -153,7 +154,7 @@ function Landing() {
               </motion.div>
             </div>
             <motion.a
-              href={`/Sipua_V2/LetsTalk`}
+              href={`/${urls.main}/LetsTalk`}
               onClick={() => console.log("object")}
               className="talk"
             >

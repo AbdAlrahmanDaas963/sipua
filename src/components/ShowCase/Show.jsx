@@ -6,6 +6,7 @@ import { motion, useAnimation } from "framer-motion";
 import BackBtn from "./../common/BackBtn";
 import darkSvg from "../../svg/dark.svg";
 import topSvg from "../../svg/top.svg";
+import { urls } from "../../config/Urls";
 
 function Show({ onclick }) {
   const [dark, setDark] = useState(0);
@@ -30,7 +31,7 @@ function Show({ onclick }) {
 
   return (
     <div className="show">
-      <BackBtn to={"/Sipua_V2/ShowCase"} onClick={handleClick} />
+      <BackBtn to={`/${urls.main}/ShowCase`} onClick={handleClick} />
       <motion.div
         animate={{
           filter: `invert(${dark})`,

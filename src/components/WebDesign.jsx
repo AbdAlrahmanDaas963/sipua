@@ -3,11 +3,12 @@ import BackBtn from "./common/BackBtn";
 
 import PorfHeader from "./common/PorfHeader";
 import Carousel2 from "./carousel/carousel2";
+import { urls } from "../config/Urls";
 
 function WebDesign() {
   return (
     <div id="WebDesign" className="h-100vh webdesign">
-      <BackBtn to={"/Sipua_V2"} />
+      <BackBtn to={`/${urls.main}`} />
       <PorfHeader
         title={"web desgin"}
         desc={

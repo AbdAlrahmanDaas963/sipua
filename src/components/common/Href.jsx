@@ -23,14 +23,13 @@ function Href({ id, href, clicked, statues }) {
       },
     },
   };
-  const href2 = `${urls.main}/#${href}`;
+  const href2 = `/${urls.main}/#${href}`;
   return (
-    <a href={`/Sipua_V2/#${href}`} onClick={() => clicked(id)} id={id}>
+    <a href={href2} onClick={() => clicked(id)} id={id}>
       {" "}
       <motion.span id={`span${id}`}></motion.span> {href}
     </a>
   );
 }
-// href={`/Sipua_V2/#${href}`}
 
 export default Href;
