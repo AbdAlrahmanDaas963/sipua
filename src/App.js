@@ -24,6 +24,7 @@ function App() {
 
       <Switch>
         <Route path="/sipua-ghPages/LetsTalk" component={() => <LetsTalk />} />
+        <Route component={() => <ComingSoon />} />
         <Route path="/" exact component={() => <All />} />
         <Route path="/sipua-ghPages" exact component={() => <All />} />
         <Route
@@ -37,8 +38,6 @@ function App() {
         />
         <Route path="/sipua-ghPages/ShowCase" component={() => <AllShows />} />
         <Route path="/sipua-ghPages/LetsTalk" component={() => <LetsTalk />} />
-
-        <Route component={() => <ComingSoon />} />
       </Switch>
     </div>
   );
