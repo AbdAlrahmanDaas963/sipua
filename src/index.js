@@ -1,3 +1,5 @@
+import { Buffer } from "buffer";
+
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
@@ -18,6 +20,8 @@ import "./components/ScrollSpy/scrollspy.css";
 
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+
+global.Buffer = Buffer;
 
 ReactDOM.render(
   <React.StrictMode>
