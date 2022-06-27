@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { motion, useAnimation } from "framer-motion";
-import IsEmail from "isemail";
 
 import ContactInput from "./common/ContactInput";
 import Spy from "../ScrollSpy/Spy";
@@ -10,24 +9,17 @@ function Contact2() {
   const [trueName, setName] = useState(true);
   const textRef = React.createRef();
 
-  function validate(email, type) {
-    if (type == "text") {
-      let tru;
-      if (!email.length) {
-        // I am empty
-        tru = false;
-        console.log("empty");
-      } else {
-        tru = true;
-        console.log(" not empty");
-        // I am not empty
-      }
-      setName(tru);
+  const validate2 = (text) => {
+    let reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/;
+    if (reg.test(text) === false) {
+      // console.log("Email is Not Correct");
+      setTrueEmail(false);
+      return false;
     } else {
-      const tru = IsEmail.validate(email) ? true : false;
-      setTrueEmail(tru);
+      setTrueEmail(true);
+      // console.log("Email is Correct");
     }
-  }
+  };
   function handleChange(e) {
     const text = textRef.current.value;
     const lines = text.split("\n");
@@ -52,7 +44,7 @@ function Contact2() {
 
               <ContactInput
                 type={"text"}
-                validate={validate}
+                validate={validate2}
                 placeholder={"Van gogh"}
                 error={!trueName}
               />
@@ -61,7 +53,7 @@ function Contact2() {
               <div className="contact-title">email</div>
               <ContactInput
                 type={"email"}
-                validate={validate}
+                validate={validate2}
                 placeholder={"CreativeMf@gmail.com"}
                 error={!trueEmail}
               />

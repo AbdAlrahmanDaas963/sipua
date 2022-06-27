@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import IsEmail from "isemail";
 
 import FormInput from "../common/FormInput";
 import Linkss from "./../common/Linkss";
@@ -9,12 +8,22 @@ import "./soon.css";
 function ComingSoon() {
   const [trueEmail, setTrueEmail] = useState(true);
   const [text, setText] = useState("");
+  const [email, setEmail] = useState();
 
-  function validate(email) {
-    const tru = IsEmail.validate(email) ? true : false;
-    setText(tru);
-    setTrueEmail(tru);
-  }
+  const validate2 = (text) => {
+    let reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/;
+    if (reg.test(text) === false) {
+      // console.log("Email is Not Correct");
+      setEmail({ email: text });
+      setTrueEmail(false);
+      return false;
+    } else {
+      setEmail({ email: text });
+      setTrueEmail(true);
+      // console.log("Email is Correct");
+    }
+  };
+
   return (
     <div className="coming-soon">
       <div className="soon-body">
@@ -27,7 +36,7 @@ function ComingSoon() {
       </div>
       <div className="soon-form">
         <div>Your Email</div>
-        <FormInput type={"email"} validate={validate} error={!trueEmail} />
+        <FormInput type={"email"} validate={validate2} error={!trueEmail} />
         <button className="notify" disabled={!trueEmail}>
           Notify me
         </button>

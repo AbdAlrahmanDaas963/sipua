@@ -13,31 +13,25 @@ import LetsTalk from "./components/LetsTalk/LetsTalk";
 function App() {
   return (
     <div className="App">
-      {/* <Link
-        style={{ position: "absolute", top: " 50vh", zIndex: 2 }}
-        to="/Sipua_V2/ComingSoon"
-      >
-        ComingSoon
-      </Link> */}
-      {/* <All /> */}
-      {/* <WebDesign /> */}
-
       <Switch>
-        <Route path="/sipua-ghPages/LetsTalk" component={() => <LetsTalk />} />
-        <Route component={() => <ComingSoon />} />
-        <Route path="/" exact component={() => <All />} />
-        <Route path="/sipua-ghPages" exact component={() => <All />} />
+        <Route path="/" exact component={() => <ComingSoon />} />
+        <Route path="/ComingSoon" exact component={() => <ComingSoon />} />
         <Route
           path="/sipua-ghPages/ComingSoon"
+          exact
           component={() => <ComingSoon />}
         />
+        <Route component={() => <NotFound />} />
 
+        {/* enable */}
+        {/* <Route path="/sipua-ghPages" exact component={() => <All />} />
+        <Route path="/sipua-ghPages/LetsTalk" component={() => <LetsTalk />} />
         <Route
           path="/sipua-ghPages/webdesign"
           component={() => <WebDesign />}
         />
         <Route path="/sipua-ghPages/ShowCase" component={() => <AllShows />} />
-        <Route path="/sipua-ghPages/LetsTalk" component={() => <LetsTalk />} />
+        <Route path="/sipua-ghPages/LetsTalk" component={() => <LetsTalk />} /> */}
       </Switch>
     </div>
   );
