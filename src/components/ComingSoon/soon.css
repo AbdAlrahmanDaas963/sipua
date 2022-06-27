@@ -1,6 +1,7 @@
 .coming-soon {
   overflow-x: hidden;
-  min-height: 100vh;
+  height: 100vh;
+  min-height: 667px;
   box-sizing: border-box;
   display: grid;
   grid-template-rows: 60% 20% 20%;
