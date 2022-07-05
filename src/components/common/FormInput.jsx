@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-function FormInput({ type, validate, error }) {
+function FormInput({ type, validate, error, change, err, ...props }) {
   window.Buffer = window.Buffer || require("buffer").Buffer;
   const ref = React.createRef();
   useEffect(() => {
@@ -9,6 +9,11 @@ function FormInput({ type, validate, error }) {
     }
     console.log("ref", ref);
   }, [error]);
+
+  const handle = (e) => {
+    validate(e.target.value);
+    change(e);
+  };
   return (
     <div className="subInput">
       <input
@@ -18,9 +23,14 @@ function FormInput({ type, validate, error }) {
         name=""
         id=""
         placeholder="Vangogh@gmail.com"
-        onChange={(e) => validate(e.target.value)}
+        onChange={handle}
+        {...props}
       />
-      {error && <div className="wrong wrong-email">Invalid {type}</div>}
+
+      {(err && (
+        <div className={`wrong wrong-email ${err.type}`}>{err.text}</div>
+      )) ||
+        (error && <div className="wrong wrong-email">Invalid {type}</div>)}
     </div>
   );
 }

@@ -16,6 +16,9 @@ function App() {
       <Switch>
         <Route path="/" exact component={() => <ComingSoon />} />
         <Route path="/ComingSoon" exact component={() => <ComingSoon />} />
+
+        <Route path="/sipua-ghPages" exact component={() => <All />} />
+
         <Route
           path="/sipua-ghPages/ComingSoon"
           exact
