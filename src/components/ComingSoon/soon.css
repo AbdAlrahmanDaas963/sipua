@@ -126,7 +126,7 @@
 }
 .soon-footer .lin {
   margin-top: 10px;
-  width: 300px;
+  width: 370px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -164,10 +164,13 @@
     grid-template-rows: auto auto auto;
   }
   .soon-footer .lin {
-    width: 200px;
+    width: 287px;
   }
 }
-@media screen and (min-width: 769px) and (max-width: 992px) {
+@media screen and (min-width: 400px) and (max-width: 992px) {
+  .soon-footer .lin {
+    width: 325px;
+  }
 }
 @media screen and (min-width: 993px) {
 }
