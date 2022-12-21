@@ -17,9 +17,10 @@ function WhatI() {
           What I can <br /> Help you with
         </div>
         <div>
-          In a world full of (....) and (....), We see ourselves (.......) with
-          the feeling of (.....), What I offer here is what I use to get rid of
-          these feelings for myself and hopefully for you too.
+          In a world full of copies and cliches, We see ourselves fading out
+          with the feeling that something is missing..... What I offer here is
+          what I use to get out of the bubble of normality to try new things and
+          go crazy with ideas.
         </div>
       </div>
       <div className="what-body">

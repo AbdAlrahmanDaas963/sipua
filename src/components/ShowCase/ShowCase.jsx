@@ -22,7 +22,7 @@ export default function ShowCase() {
   return (
     <>
       <div className="showcase" id="Showcase" ref={ref}>
-        <BackBtn to={`/${urls.main}/#Porfolio`} />
+        <BackBtn to={`/#Porfolio`} />
         <PorfHeader
           title={"Showcase"}
           desc={

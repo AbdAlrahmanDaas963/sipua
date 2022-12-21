@@ -100,7 +100,7 @@ ul {
 
 .back {
   position: absolute;
-  z-index: -1;
+  z-index: -3;
   width: 100%;
   height: 150vh;
   background: radial-gradient(at 10% 10%, #434447, #191b1e, #191b1e);

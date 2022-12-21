@@ -36,24 +36,9 @@ function SomeOf() {
         My work
       </motion.div>
       <div className="circles">
-        <Circle
-          title={"UX/UI"}
-          img={img}
-          to={`/${urls.main}/webdesign`}
-          delay={"0.2"}
-        />
-        <Circle
-          title={"ART"}
-          img={img}
-          to={`/${urls.main}/web`}
-          delay={"0.4"}
-        />
-        <Circle
-          title={"SHOWCASE"}
-          img={img}
-          to={`/${urls.main}/ShowCase`}
-          delay={"0.6"}
-        />
+        <Circle title={"UX/UI"} img={img} to={`/webdesign`} delay={"0.2"} />
+        <Circle title={"ART"} img={img} to={`/web`} delay={"0.4"} />
+        <Circle title={"SHOWCASE"} img={img} to={`/showcase`} delay={"0.6"} />
       </div>
     </motion.div>
   );

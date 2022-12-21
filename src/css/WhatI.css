@@ -68,15 +68,15 @@
   background-color: rgba(0, 255, 255, 0);
 }
 .what-body .para-one {
-  font-size: 25px;
+  font-size: 26px;
   color: rgba(255, 255, 255, 0.897);
 }
 .what-body .para-two {
-  font-size: 15px;
+  font-size: 16px;
   color: rgba(255, 255, 255, 0.733);
 }
 .what-body .para-three {
-  font-size: 11px;
+  font-size: 13px;
   color: rgba(255, 255, 255, 0.411);
 }
 .what-i-para div {
@@ -119,8 +119,12 @@
   }
 }
 @media screen and (min-width: 1091px) {
-  .what-body {
+  /* .what-body {
     grid-template-columns: 25% 25% 25% 25%;
+  } */
+  .what-body {
+    grid-template-columns: 35% 50%;
+    justify-items: flex-start;
   }
   .what-head div:last-child {
     width: 750px;

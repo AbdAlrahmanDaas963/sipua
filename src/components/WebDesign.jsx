@@ -8,7 +8,7 @@ import { urls } from "../config/Urls";
 function WebDesign() {
   return (
     <div id="WebDesign" className="h-100vh webdesign">
-      <BackBtn to={`/${urls.main}`} />
+      <BackBtn to={`/`} />
       <PorfHeader
         title={"web desgin"}
         desc={

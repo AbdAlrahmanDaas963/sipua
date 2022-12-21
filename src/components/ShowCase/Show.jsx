@@ -31,7 +31,7 @@ function Show({ onclick }) {
 
   return (
     <div className="show">
-      <BackBtn to={`/${urls.main}/ShowCase`} onClick={handleClick} />
+      <BackBtn to={`/ShowCase`} onClick={handleClick} />
       <motion.div
         animate={{
           filter: `invert(${dark})`,

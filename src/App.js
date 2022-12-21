@@ -14,27 +14,23 @@ function App() {
   return (
     <div className="App">
       <Switch>
-        <Route path="/" exact component={() => <ComingSoon />} />
+        {/* <Route path="/" exact component={() => <ComingSoon />} />
         <Route path="/ComingSoon" exact component={() => <ComingSoon />} />
 
-        {/* <Route path="/sipua-ghPages" exact component={() => <All />} /> */}
-
+        <Route path="/Sipua_V2" exact component={() => <All />} />
+        <Route path="/Sipua_V2/LetsTalk" component={() => <LetsTalk />} />
         <Route
           path="/sipua-ghPages/ComingSoon"
           exact
           component={() => <ComingSoon />}
-        />
-        <Route component={() => <NotFound />} />
+        /> */}
 
         {/* enable */}
-        {/* <Route path="/sipua-ghPages" exact component={() => <All />} />
-        <Route path="/sipua-ghPages/LetsTalk" component={() => <LetsTalk />} />
-        <Route
-          path="/sipua-ghPages/webdesign"
-          component={() => <WebDesign />}
-        />
-        <Route path="/sipua-ghPages/ShowCase" component={() => <AllShows />} />
-        <Route path="/sipua-ghPages/LetsTalk" component={() => <LetsTalk />} /> */}
+        <Route path="/" exact component={() => <All />} />
+        <Route path="/LetsTalk" component={() => <LetsTalk />} />
+        <Route path="/webdesign" component={() => <WebDesign />} />
+        <Route path="/showcase" component={() => <AllShows />} />
+        <Route component={() => <NotFound />} />
       </Switch>
     </div>
   );

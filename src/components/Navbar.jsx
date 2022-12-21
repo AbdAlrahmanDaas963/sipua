@@ -141,9 +141,7 @@ function Navbar() {
               ))}
             </ul>
           </div>
-          <div className="links">
-            <Linkss />
-          </div>
+          <div className="links">{/* <Linkss /> */}</div>
         </div>
         <div onClick={handleSlide} className="more">
           <div className="in">

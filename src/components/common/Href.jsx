@@ -23,7 +23,7 @@ function Href({ id, href, clicked, statues }) {
       },
     },
   };
-  const href2 = `/${urls.main}/#${href}`;
+  const href2 = `/#${href}`;
   return (
     <a href={href2} onClick={() => clicked(id)} id={id}>
       {" "}

@@ -148,14 +148,14 @@ function GetTo() {
             </div>
             <motion.div className="in" variants={ParVar} animate={Par}>
               <div className="para-p1">
-                In addition of overthinking I spend my time turning ideas into
-                visual content. Planning and strategic thinking are something I
-                enjoy doing for myself and for others which led me to UX design.
+                Tech & Art nerd with a mission to help humans understand and
+                improve the creative process, Skilled in aesthetics and
+                strategic thinking, and always willing to make projects that
+                include visuals, psychology, and technology.
               </div>
               <div className="para-p2">
-                In addition of overthinking I spend my time turning ideas into
-                visual content. Planning and strategic thinking are something I
-                enjoy doing for myself and for others which led me to UX design.
+                Sipua is my personal brand name that I came up with many years
+                ago and stuck with me till now.
               </div>
             </motion.div>
           </div>

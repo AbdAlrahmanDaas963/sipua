@@ -57,7 +57,7 @@ function LetsTalk() {
   console.log(urls.main);
   return (
     <div className="lets-talk">
-      <BackBtn to={`/${urls.main}`} />
+      <BackBtn to={`/`} />
       <div className="lets-talk-head">
         <div>{title.one}</div>
         <div>{title.two}</div>

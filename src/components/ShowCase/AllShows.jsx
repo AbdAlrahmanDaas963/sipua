@@ -11,7 +11,7 @@ function AllShows() {
   return (
     <Switch>
       <Route path={`${path}/:show`} component={() => <Show />} />
-      <Route path={`/${urls.main}/ShowCase`} component={() => <ShowCase />} />
+      <Route path={`/ShowCase`} component={() => <ShowCase />} />
     </Switch>
   );
 }

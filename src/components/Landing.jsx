@@ -111,10 +111,15 @@ function Landing() {
           height="100%"
         />
       </motion.div>
+      <div className="back-title">
+        Art
+        <br />&<br />
+        tech
+      </div>
       <div className="landing-body">
         <div className="up">
           <motion.div className="links" variants={linkVar} animate={link}>
-            <Linkss />
+            {/* <Linkss /> */}
           </motion.div>
           <div className="welcome">
             <div className="wel">
@@ -154,7 +159,7 @@ function Landing() {
               </motion.div>
             </div>
             <motion.a
-              href={`/${urls.main}/LetsTalk`}
+              href={`/LetsTalk`}
               onClick={() => console.log("object")}
               className="talk"
             >
@@ -202,6 +207,7 @@ function Landing() {
               <p>Chuck Palahnuik ~ Fight club</p>
             </div>
           </div>
+          <Linkss />
         </motion.div>
       </div>
     </motion.div>
